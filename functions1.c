@@ -14,6 +14,7 @@
  */
 int print_unsigned(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
+
 {
 	int i = BUFF_SIZE - 2;
 	unsigned long int num = va_arg(types, unsigned long int);
@@ -45,6 +46,7 @@ int print_unsigned(va_list types, char buffer[],
  * @width: get width
  * @precision: Precision specification
  * @size: Size specifier
+ *
  * Return: Number of chars printed
  */
 int print_octal(va_list types, char buffer[],
@@ -87,6 +89,7 @@ int print_octal(va_list types, char buffer[],
  * @width: get width
  * @precision: Precision specification
  * @size: Size specifier
+ *
  * Return: Number of chars printed
  */
 int print_hexadecimal(va_list types, char buffer[],
