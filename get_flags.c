@@ -6,6 +6,7 @@
  * @i: take a parameter.
  * Return: Flags:
  */
+
 int get_flags(const char *format, int *i)
 {
 	/* - + 0 # ' ' */
@@ -18,6 +19,7 @@ int get_flags(const char *format, int *i)
 	for (curr_i = *i + 1; format[curr_i] != '\0'; curr_i++)
 	{
 		for (j = 0; FLAGS_CH[j] != '\0'; j++)
+
 			if (format[curr_i] == FLAGS_CH[j])
 			{
 				flags |= FLAGS_ARR[j];
@@ -29,6 +31,5 @@ int get_flags(const char *format, int *i)
 	}
 
 	*i = curr_i - 1;
-
 	return (flags);
 }
